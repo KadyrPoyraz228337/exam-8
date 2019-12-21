@@ -8,7 +8,9 @@ const Sidebar = () => {
     return (
         <div>
             <ListGroup>
-
+                {CATEGOTIES.map(category => {
+                    return <SidebarListItem to={category} key={category}>{category}</SidebarListItem>
+                })}
             </ListGroup>
         </div>
 );
