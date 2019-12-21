@@ -6,7 +6,7 @@ const NavItm = (
     {to, children}
 ) => {
     return (
-        <NavItem>
+        <NavItem className='ml-2'>
             <NavLink to={to}>{children}</NavLink>
         </NavItem>
     );
