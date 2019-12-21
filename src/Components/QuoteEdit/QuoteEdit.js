@@ -44,7 +44,7 @@ class QuoteEdit extends Component {
                     <Input type="text" name="author" id="Author" placeholder="Enter author" onChange={this.inputHandler} value={this.state.author}/>
                     <Label for="text" className='mt-2'>Quote text</Label>
                     <Input type="textarea" name="text" id="Author" placeholder="Enter quote text" style={{height: '200px'}} onChange={this.inputHandler} value={this.state.text}/>
-                    <Button onClick={this.editQuote} className='mt-3' >Save</Button>
+                    <Button onClick={this.editQuote} className='mt-3' >Save edit</Button>
                 </Form>
             </div>
         );

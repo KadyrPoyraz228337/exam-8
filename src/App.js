@@ -23,8 +23,8 @@ class App extends Component {
                         <Switch>
                             <Route exact path='/' component={Quotes}/>
                             <Route path='/add-quote' component={AddQuote}/>
-                            <Route path='/:name' component={Quotes}/>
                             <Route path='/quote/edit/:id' component={QuoteEdit}/>
+                            <Route path='/:name' component={Quotes}/>
                             <Route render={() => <h1>Not found</h1>}/>
                         </Switch>
                     </Container>

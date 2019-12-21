@@ -1,5 +1,9 @@
 export const CATEGOTIES = [
     {
+        title: 'All',
+        id: 'all'
+    },
+    {
         title: 'Star Wars',
         id: 'star-wars'
     },
