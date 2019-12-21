@@ -8,6 +8,7 @@ const Navigation = () => {
             <Container>
                 <NavbarBrand>Quotes central</NavbarBrand>
                 <Nav className="ml-auto" navbar>
+                    <NavItm to={'/'}>123</NavItm>
                 </Nav>
             </Container>
         </Navbar>
