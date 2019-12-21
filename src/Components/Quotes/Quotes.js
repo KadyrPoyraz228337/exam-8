@@ -22,7 +22,7 @@ class Quotes extends Component {
                 </Col>
                 <Col xs='8' sm='8'>
                     <div className='border p-2 overflow-auto' style={{borderRadius: '.255rem', height: 'calc(100vh - 80px)'}}>
-                        {Object.keys(this.state.quotes).map(quote => <CardElem title={this.state.quotes[quote].quote.author} text={this.state.quotes[quote].quote.text}/>)}
+                        {Object.keys(this.state.quotes).map(quote => <CardElem key={quote} title={this.state.quotes[quote].author} text={this.state.quotes[quote].text}/>).reverse()}
                     </div>
                 </Col>
             </Row>

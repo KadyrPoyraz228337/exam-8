@@ -7,9 +7,10 @@ const CardElem = (
     return (
         <Card className='mb-1'>
             <CardBody>
-                <CardTitle>{title}</CardTitle>
                 <CardText>{text}</CardText>
-                <Button>Button</Button>
+                <CardTitle>{'― ' + title}</CardTitle>
+                <Button color='success' className='mr-2'>Edit</Button>
+                <Button color='danger'>Delete</Button>
             </CardBody>
         </Card>
     );

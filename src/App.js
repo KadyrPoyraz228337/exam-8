@@ -9,6 +9,7 @@ import {
 
 import Navigation from "./Components/Navigation/Navigation";
 import Quotes from "./Components/Quotes/Quotes";
+import AddQuote from "./Components/AddQuote/AddQuote";
 
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path='/' component={Quotes}/>
                             <Route path='/categories' component={Quotes}/>
-                            <Route exact path='/add-quote' render={() => <h1>Add Quotes</h1>}/>
+                            <Route exact path='/add-quote' component={AddQuote}/>
                             <Route render={() => <h1>Not found</h1>}/>
                         </Switch>
                     </Container>
