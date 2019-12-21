@@ -20,7 +20,7 @@ class Quotes extends Component {
     };
 
     deleteHandler = async id => {
-        const resp = await axios.delete(`https://control-8-kadyr.firebaseio.com/quotes/${id}.json`);
+        await axios.delete(`https://control-8-kadyr.firebaseio.com/quotes/${id}.json`);
         this.getQuotesData();
     };
 
@@ -32,7 +32,7 @@ class Quotes extends Component {
                 </Col>
                 <Col xs='8' sm='8'>
                     {this.state.quotes && <div className='border p-2 overflow-auto' style={{borderRadius: '.255rem', height: 'calc(100vh - 80px)'}}>
-                            {Object.keys(this.state.quotes).map(quote => <CardElem key={quote} DeleteButtonClick={() => this.deleteHandler(quote)} title={this.state.quotes[quote].author} text={this.state.quotes[quote].text}/>).reverse()}
+                            {Object.keys(this.state.quotes).map(quote => <CardElem key={quote} DeleteButtonClick={() => this.deleteHandler(quote)} title={this.state.quotes[quote].author} id={quote} text={this.state.quotes[quote].text}/>).reverse()}
                         </div>
                     }
                 </Col>

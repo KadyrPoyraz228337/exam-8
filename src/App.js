@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Container from "reactstrap/es/Container";
 import {
     BrowserRouter as Router,
@@ -10,6 +9,7 @@ import {
 import Navigation from "./Components/Navigation/Navigation";
 import Quotes from "./Components/Quotes/Quotes";
 import AddQuote from "./Components/AddQuote/AddQuote";
+import QuoteEdit from "./Components/QuoteEdit/QuoteEdit";
 
 
 class App extends Component {
@@ -23,7 +23,8 @@ class App extends Component {
                         <Switch>
                             <Route exact path='/' component={Quotes}/>
                             <Route path='/categories' component={Quotes}/>
-                            <Route exact path='/add-quote' component={AddQuote}/>
+                            <Route path='/add-quote' component={AddQuote}/>
+                            <Route path='/quote/edit/:id' component={QuoteEdit}/>
                             <Route render={() => <h1>Not found</h1>}/>
                         </Switch>
                     </Container>

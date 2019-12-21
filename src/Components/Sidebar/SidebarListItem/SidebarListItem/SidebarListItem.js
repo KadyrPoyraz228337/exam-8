@@ -1,6 +1,6 @@
 import React from 'react';
 import {ListGroupItem} from "reactstrap";
-import {link, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 const SidebarListItem = (
     {children, to}
