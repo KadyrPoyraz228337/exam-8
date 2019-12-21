@@ -4,7 +4,7 @@ import NavItm from "./NavItm/NavItm";
 
 const Navigation = () => {
     return (
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" className='mb-2'>
             <Container>
                 <NavbarBrand>Quotes central</NavbarBrand>
                 <Nav className="ml-auto" navbar>
