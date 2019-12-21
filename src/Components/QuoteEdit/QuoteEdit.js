@@ -12,6 +12,8 @@ class QuoteEdit extends Component {
         this.getQuoteById();
     }
 
+
+
     inputHandler = e => this.setState({[e.target.name]: e.target.value});
 
     editQuote = async () => {

@@ -14,6 +14,13 @@ class Quotes extends Component {
         this.getQuotesData();
     }
 
+    async componentDidUpdate(prevProps) {
+        if(this.props.match.params.name && prevProps.match.params.name !== this.props.match.params.name) {
+            const resp = await axios.get(`https://control-8-kadyr.firebaseio.com/quotes.json?orderBy="category"&equalTo="${this.props.match.params.name}"`);
+            this.setState({quotes: resp.data});
+        }
+    }
+
     getQuotesData = async () => {
         const resp = await axios.get('https://control-8-kadyr.firebaseio.com/quotes.json');
         this.setState({quotes: resp.data})

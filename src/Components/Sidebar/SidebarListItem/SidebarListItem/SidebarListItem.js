@@ -7,7 +7,7 @@ const SidebarListItem = (
 ) => {
     return (
         <ListGroupItem className='p-0'>
-            <NavLink to={'/categories/' + to} className='w-100 h-100 d-inline-block px-4 py-3'>
+            <NavLink to={`/${to}`}   className='w-100 h-100 d-inline-block px-4 py-3'>
                 {children}
             </NavLink>
         </ListGroupItem>

@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div>
             <ListGroup>
                 {CATEGOTIES.map(category => {
-                    return <SidebarListItem to={category.id} key={category.id}>{category.title}</SidebarListItem>
+                    return <SidebarListItem to={category.id} to={category.id} key={category.id}>{category.title}</SidebarListItem>
                 })}
             </ListGroup>
         </div>
