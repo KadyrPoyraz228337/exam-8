@@ -8,8 +8,7 @@ import {
 } from "react-router-dom";
 
 import Navigation from "./Components/Navigation/Navigation";
-import Sidebar from "./Components/Sidebar/Sidebar";
-import {Col, Row} from "reactstrap";
+import Quotes from "./Components/Quotes/Quotes";
 
 
 class App extends Component {
@@ -20,11 +19,12 @@ class App extends Component {
                 <Router>
                     <Navigation/>
                     <Container>
-                        <Row>
-                            <Col xs='4' sm='4'>
-                                <Sidebar/>
-                            </Col>
-                        </Row>
+                        <Switch>
+                            <Route exact path='/' component={Quotes}/>
+                            <Route path='/categories' component={Quotes}/>
+                            <Route exact path='/add-quote' render={() => <h1>Add Quotes</h1>}/>
+                            <Route render={() => <h1>Not found</h1>}/>
+                        </Switch>
                     </Container>
                 </Router>
             </div>
